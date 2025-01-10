@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-display: swap;
+    font-family: 'Platypi-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../public/fonts/platypi-v4-latin_latin-ext-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Platypi-medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../public/fonts/platypi-v4-latin_latin-ext-500.woff2') format('woff2'); 
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Platypi-bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../public/fonts/platypi-v4-latin_latin-ext-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Hepta-Slab-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../public/fonts/hepta-slab-v23-latin_latin-ext-regular.woff2') format('woff2'); 
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Hepta-Slab-bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../public/fonts/hepta-slab-v23-latin_latin-ext-700.woff2') format('woff2');
+  }
+
+  body {
+    @apply cursor-none;
+  }
+  h1 {
+    @apply text-5xl text-creamy-default font-['Platypi-bold'];
+  }
+
+  h2 {
+    @apply text-xl mt-3 text-creamy-default;
+  }
+
+  h3 {
+    @apply text-4xl text-creamy-default font-['Platypi-medium'] text-center;
+  }
+
+  h4 {
+    @apply text-2xl text-creamy-default font-['platypi-medium'] text-center;
+  }
+
+  p {
+    @apply text-base text-creamy-default font-['Hepta-Slab-regular'];
+  }
+  span {
+    @apply text-brown-default text-sm;
+  }
+}
+
+@layer components {
+  .p-bold {
+    @apply text-background-dark font-['Hepta-Slab-bold'] text-lg;
+  }
+  .email {
+    @apply mt-8 text-4xl text-center text-creamy-default font-['platypi-medium'];
+  }
+  .projekt {
+    @apply space-y-10 bg-background-dark p-8;
+  }
+  .skills {
+    @apply flex flex-col items-center;
+  }
+  .kurzor {
+    @apply fixed pointer-events-none w-3 h-3 bg-white-default rounded-full;
+    box-shadow: 0 0 20px #D6D2CF,
+                0 0 30px #D6D2CF,
+                0 0 50px #D6D2CF;
+  }
+  .kurzor:before {
+    @apply absolute bg-creamy-default w-10 h-10 opacity-10 translate-x-[-36%] translate-y-[-36%] rounded-full;
+    content: '';
+  }
+  
+}
