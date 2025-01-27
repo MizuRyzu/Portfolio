@@ -685,10 +685,6 @@ span {
   color: rgb(214 210 207 / var(--tw-text-opacity, 1));
 }
 
-.projekt {
-  width: 50%;
-}
-
 .projekt > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -699,6 +695,12 @@ span {
   --tw-bg-opacity: 1;
   background-color: rgb(70 73 86 / var(--tw-bg-opacity, 1));
   padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .projekt {
+    width: 50%;
+  }
 }
 
 .skills {
